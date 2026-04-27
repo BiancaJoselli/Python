@@ -15,5 +15,12 @@ vendas = [
 categoria = [item["categoria"] for item in vendas]
 soma = [item["valor"] for item in vendas]
 
-
 print(categoria)
+
+
+contagem = {}
+for valor in vendas:
+        categoria = vendas["valor"]
+        contagem[categoria] = contagem.get(categoria, 0) + 1
+
+print(contagem)
