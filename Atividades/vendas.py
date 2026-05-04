@@ -14,4 +14,3 @@ vendas = [
 
 agrupamento: {}
 
-for produto in categoria;
