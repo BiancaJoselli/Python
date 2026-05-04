@@ -12,15 +12,6 @@ vendas = [
     {"produto": "Impressora", "categoria": "Eletrônicos", "valor": 650},
 ]
 
-categoria = [item["categoria"] for item in vendas]
-soma = [item["valor"] for item in vendas]
+agrupamento: {}
 
-print(categoria)
-
-
-contagem = {}
-for valor in vendas:
-        categoria = vendas["valor"]
-        contagem[categoria] = contagem.get(categoria, 0) + 1
-
-print(contagem)
+for produto in categoria;
