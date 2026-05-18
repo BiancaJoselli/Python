@@ -53,3 +53,4 @@ def transformar_clientes(clientes):
 
 def transformar_transacoes(transacoes):
     return [transformar_transacao(t) for t in transacoes]
+

@@ -1,7 +1,7 @@
 # main.py
 from leitor import carregar_clientes, carregar_transacoes, carregar_config
 from validador import validar_cliente, validar_transacao, separar_registros
-from DATAPROCESSOR.transformador import transformar_clientes, transformar_transacoes
+from transformador import transformar_clientes, transformar_transacoes
 
 # --- LEITURA ---
 clientes_raw = carregar_clientes("data/clientes.csv")
@@ -23,11 +23,13 @@ transacoes_validas, transacoes_invalidas = separar_registros(
 clientes = transformar_clientes(clientes_validos)
 transacoes = transformar_transacoes(transacoes_validas)
 
+# --- NORMALIZADOR ---
+
+
 # --- RESUMO ---
 print("=== DataProcessor ===")
 print(f"Clientes: {len(clientes)} válidos, {len(clientes_invalidos)} inválidos")
 print(f"Transações: {len(transacoes)} válidas, {len(transacoes_invalidas)} inválidas")
-print()
 print("Clientes normalizados:")
 for c in clientes:
     print(f"  {c['nome']} | {c['email']} | {c['cidade']}")
